@@ -46,6 +46,13 @@ expand_template(
             "@llvm-project//llvm:FileCheck",
         ],
         size = "small",
+        tags = ["stablehlo_data_tests"],
+
     )
     for src in glob(["**/*.mlir"])
 ]
+
+test_suite(
+    name = "stablehlo_data_tests",
+    tags = ["stablehlo_data_tests"],
+)
